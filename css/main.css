@@ -15,4 +15,18 @@
   width: 120px;
   background-color: brown;
   color: aliceblue;
+
+}
+.battle {
+  background-color: darksalmon;
+  border-radius: 10%;
+}
+.h1{
+  text-transform: uppercase;
+  color: brown;
+}
+.list{
+  display: flex;
+  list-style: none;
+  gap: 50px;
 }

@@ -4,6 +4,9 @@
 const result = document.querySelector('.js-result')
 const btn = document.querySelector('.js-btn');
 const select = document.querySelector('.js-select');
+const resutJugador = document.querySelector('.js-result-jugador');
+const resutComputadora = document.querySelector('.js-result-computadora');
+
 
 
 function getRandom(max) {
@@ -39,15 +42,17 @@ function selectGood () {
  let good = parseInt(select.value)
 if (good > strong) {
   result.innerHTML = " Ha ganado el Ejército del Bien! Enhorabuena."
+  paintJugador.innerHTML = '1'
 }
  if (good < strong) {
   result.innerHTML = " Ha ganado el Ejército del Mal! Vuelve a Intentarlo."
+  paintComputadora.innerHTML = '1'
  }
  if (good === strong ) {
   result.innerHTML = "Empate."
  }
 }
-
+// la parte de ir sumando quien gana no me ha dado tiempo
 
 function handleClick(e) {
  e.preventDefault();
