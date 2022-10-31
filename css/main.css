@@ -1,0 +1,18 @@
+* {
+  margin: 0;
+}
+.main{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  gap: 20px;
+}
+.btn{
+  height: 60px;
+  width: 120px;
+  background-color: brown;
+  color: aliceblue;
+}
