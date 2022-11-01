@@ -30,3 +30,6 @@
   list-style: none;
   gap: 50px;
 }
+.reinicio{
+  display: none;
+}
