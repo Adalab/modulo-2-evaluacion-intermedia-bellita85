@@ -1,69 +1,52 @@
 'use strict';
 
-
-const result = document.querySelector('.js-result')
+const result = document.querySelector('.js-result');
 const btn = document.querySelector('.js-btn');
 const select = document.querySelector('.js-select');
 const resutJugador = document.querySelector('.js-result-jugador');
 const resutComputadora = document.querySelector('.js-result-computadora');
 
-
-
 function getRandom(max) {
-    return Math.ceil(Math.random() * max);
-  }
-function wrong () {
-  debugger
-  let wrongRandon = getRandom (5);
-  let  strong = ""
-  if ( wrongRandon === 1 ){ 
-    strong = 2
-  }
- if (wrongRandon === 2 ){ 
-strong = 2 
+  return Math.ceil(Math.random() * max);
 }
-if (wrongRandon === 3 ){ 
-  strong = 2 
+function wrong() {
+  let wrongRandon = getRandom(5);
+  let strong = '';
+  if (wrongRandon === 1) {
+    strong = 2;
   }
-if (wrongRandon === 4 ){ 
-strong = 3 
-    }
- if (wrongRandon === 5 ){ 
- strong = 5
-      }
-     
-      return strong ;
-    };
+  if (wrongRandon === 2) {
+    strong = 2;
+  }
+  if (wrongRandon === 3) {
+    strong = 2;
+  }
+  if (wrongRandon === 4) {
+    strong = 3;
+  }
+  if (wrongRandon === 5) {
+    strong = 5;
+  }
 
-
-function selectGood () {
- 
-  let strong =  wrong();
- let good = parseInt(select.value)
-if (good > strong) {
-  result.innerHTML = " Ha ganado el Ejército del Bien! Enhorabuena."
-  paintJugador.innerHTML = '1'
+  return strong;
 }
- if (good < strong) {
-  result.innerHTML = " Ha ganado el Ejército del Mal! Vuelve a Intentarlo."
-  paintComputadora.innerHTML = '1'
- }
- if (good === strong ) {
-  result.innerHTML = "Empate."
- }
+function selectGood() {
+  let strong = wrong();
+  let good = parseInt(select.value);
+  if (good > strong) {
+    result.innerHTML = ' Ha ganado el Ejército del Bien! Enhorabuena.';
+    paintJugador.innerHTML = '1';
+  }
+  if (good < strong) {
+    result.innerHTML = ' Ha ganado el Ejército del Mal! Vuelve a Intentarlo.';
+    paintComputadora.innerHTML = '1';
+  } else if (good === strong) {
+    result.innerHTML = 'Empate.';
+  }
 }
-// la parte de ir sumando quien gana no me ha dado tiempo
-
 function handleClick(e) {
- e.preventDefault();
- 
- selectGood ();
+  e.preventDefault();
+  selectGood();
 }
- 
 
-btn.addEventListener('click', handleClick)
-
-
-// function getRandom(max) {
-//   return Math.round(Math.random() * max);
-// }
+btn.addEventListener('click', handleClick);
