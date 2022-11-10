@@ -39,11 +39,9 @@ function selectGood() {
     paint (result, ' Debe elegir una raza.' ); }
    else { if (good > strong) {
     paint (result, ' Ha ganado el Ejército del Bien! Enhorabuena.' );
-    // result.innerHTML = ' Ha ganado el Ejército del Bien! Enhorabuena.'; este si funciona
     goodFinal++;
     movie++;
     paint (resultJugador, goodFinal);
-    // resutJugador.innerHTML = `${goodFinal}`;  preguntsar por que no funciona asi
   }
   if (good < strong) {
     paint (result, ' Ha ganado el Ejército del Mal! Vuelve a Intentarlo.' );
